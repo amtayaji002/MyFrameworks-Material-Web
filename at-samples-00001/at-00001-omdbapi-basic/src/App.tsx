@@ -12,8 +12,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <ButtonUsage ></ButtonUsage>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload. <br />
+          
         </p>
       </header>
     </div>
