@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -7,41 +6,16 @@ import Container from '@mui/material/Container';
 
 // import { styled } from '@mui/material/styles';
 // import BasicStack from './basicstack';
+import FetchTrialPaperStack from './components/FetchTestView';
 
 import PrimarySearchAppBar from './appbar';
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    ...theme.applyStyles('dark', {
-        backgroundColor: '#1A2027',
-    }),
-}));
-
 export default function MyResponsiveGrid() {
     return (
-        <Box sx={{ flexGrow: 1, width: '100%' }}>
+        <>
             <PrimarySearchAppBar/>
-            <Grid container spacing={2}>
-                <Container>
-                    <Item>1</Item>
-                    <Item>2</Item>
-                    <Item>3</Item>
-                    <Item>4</Item>
-                    <Item>5</Item>
-                    <Item>6</Item>
-                    
-                    {Array.from(Array(6)).map((_, index) => (
-                    <Grid key={index} size="grow">
-                        <Item>{index} + 1</Item>
-                    </Grid>
-                    ))}
-                </Container>
-            </Grid>
-        </Box>
+            <FetchTrialPaperStack/>
+        </>
     );
 }
 
